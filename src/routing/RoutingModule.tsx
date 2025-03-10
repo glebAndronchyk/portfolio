@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
 import { RootPage } from "../pages/root/page";
 import { QueryClientProviderWrapper } from "../providers/QueryClientProviderWrapper.tsx";
 import { ContentStepperProvider } from "../providers/ContentStepperProvider.tsx";
@@ -10,7 +10,7 @@ const isScreenSupported =
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio/",
     element: (
       <>
         <CustomView condition={!isScreenSupported}>
@@ -21,6 +21,10 @@ export const router = createBrowserRouter([
         </CustomView>
       </>
     ),
+  },
+  {
+    path: "*",
+    element: <Navigate to="/portfolio/" />,
   },
 ]);
 
