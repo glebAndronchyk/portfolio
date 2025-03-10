@@ -6,11 +6,14 @@ import portfolioMd from "../assets/md/portfolio.md";
 import moreProjectsMd from "../assets/md/more-projects.md";
 // import { useStep } from "../hooks/useStep.ts";
 // import { useReward } from "react-rewards";
+import marsUrl from "../assets/images/mars.jpg";
+import shailyUrl from "../assets/images/shaily.png";
+import rpbPreviewUrl from "../assets/images/rpb-preview.gif";
 
 const projects = [
   {
     description: rpbMd,
-    imageUrl: "/images/rpb-preview.gif",
+    imageUrl: rpbPreviewUrl,
     imageHoverUI: (
       <span className="w-[31rem] h-[31rem]">
         i was in rush sorry for bad quality D:
@@ -19,14 +22,9 @@ const projects = [
   },
   {
     description: portfolioMd,
-    imageUrl: "/images/shaily.png",
+    imageUrl: shailyUrl,
     imageHoverUI: (
-      <img
-        width={500}
-        height={500}
-        className="w-full h-full"
-        src="/images/mars.jpg"
-      />
+      <img width={500} height={500} className="w-full h-full" src={marsUrl} />
     ),
   },
   {
